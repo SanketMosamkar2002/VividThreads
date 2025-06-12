@@ -1,0 +1,76 @@
+{
+  "reviews": [
+    {
+      "id": "4ca9",
+      "productId": "2",
+      "review": "Nice fabric with best price ",
+      "reviewerName": "Sanket",
+      "reviewerEmail": "sanket@gmail.com",
+      "rating": 5,
+      "date": "03/05/2024"
+    },
+    {
+      "id": "8be8",
+      "productId": "30",
+      "review": "Not so great",
+      "reviewerName": "Ritesh",
+      "reviewerEmail": "Ritesh@gmail.com",
+      "rating": 1,
+      "date": "03/05/2024"
+    },
+    {
+      "id": "1798",
+      "productId": "30",
+      "review": "Average quality product",
+      "reviewerName": "Janhavi",
+      "reviewerEmail": "janhavi@gmail.com",
+      "rating": 3,
+      "date": "03/05/2024"
+    },
+    {
+      "id": "5ba9",
+      "productId": "30",
+      "review": "Good Product with good quality but too much expensive",
+      "reviewerName": "Mansi",
+      "reviewerEmail": "mansi@gmail.com",
+      "rating": 4,
+      "date": "03/05/2024"
+    },
+    {
+      "id": "beb7",
+      "productId": "3",
+      "review": "Nice hoodie",
+      "reviewerName": "Sanket",
+      "reviewerEmail": "sanket@gmail.com",
+      "rating": 4,
+      "date": "03/05/2024"
+    },
+    {
+      "id": "e654",
+      "productId": "3",
+      "review": "Good quality",
+      "reviewerName": "Raj",
+      "reviewerEmail": "raju@gmail.com",
+      "rating": 5,
+      "date": "03/05/2024"
+    },
+    {
+      "id": "2a77",
+      "productId": "2",
+      "review": "Good Product",
+      "reviewerName": "Suraj",
+      "reviewerEmail": "suraj@gmail.com",
+      "rating": 4,
+      "date": "04/06/2024"
+    },
+    {
+      "id": "d43f",
+      "productId": "10",
+      "review": "Nice cap with perfect fitting",
+      "reviewerName": "Sanket",
+      "reviewerEmail": "saketmosamkar573@gmail.com",
+      "rating": 5,
+      "date": "06/06/2024"
+    }
+  ]
+}
