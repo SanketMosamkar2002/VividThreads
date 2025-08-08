@@ -35,7 +35,7 @@ const SignUp = () => {
       isValidPhone &&
       password.trim() !== "" &&
       confirmPassword !== "" &&
-      confirmPassword === password &&
+      // confirmPassword === password &&
       mobileNo.trim() !== ""
     ) {
       axios.post("http://localhost:4001/api/v4/signup", formData).then(
@@ -51,10 +51,11 @@ const SignUp = () => {
     console.log(password);
     console.log(confirmPassword);
     if (password !== confirmPassword) {
+      console.log("Password", password, confirmPassword);
       setIsValidConfirmPswd(true);
-      toast.error(
-        "Password mismatch! Please ensure both fields contain the same password."
-      );
+      // toast.error(
+      //   "Password mismatch! Please ensure both fields contain the same password."
+      // );
     } else {
       setIsValidConfirmPswd(false);
     }
@@ -111,7 +112,7 @@ const SignUp = () => {
                 </p>
               )}
               <input
-                type="password"
+                type="text"
                 name="password"
                 id="password"
                 placeholder="Enter password*"
@@ -138,7 +139,7 @@ const SignUp = () => {
                 </p>
               )}
               <input
-                type="password"
+                type="text"
                 name="confirm_password"
                 id="confirm_password"
                 // value={confirmPassword}

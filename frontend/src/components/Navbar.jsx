@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaSearch } from "react-icons/fa";
 import {
-  faHeart,
   faBagShopping,
   faBars,
+  faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Typography } from "@mui/material";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
 const Navbar = () => {
 
   const { myCart, logout } = useSelector((state) => state.myStore);
@@ -56,63 +57,60 @@ const Navbar = () => {
               style={{ color: "ffff" }}
             />
           </div>
-          <div className="navbar-content">
+          <div className="w-[30%] flex items-center justify-evenly">
             <p>
-              <NavLink to="/">HOME</NavLink>
+              <NavLink to="/">
+                <Typography variant="subtitle1">Home</Typography>
+              </NavLink>
             </p>
             <p className="products">
-              <NavLink to="/products">PRODUCTS</NavLink>
+              <NavLink to="/products"><Typography variant="subtitle1">Products</Typography></NavLink>
               <ul className="products-categories">
                 <li>
-                  <NavLink to="products/clothes">Clothes</NavLink>
+                  <NavLink to="products/clothes"><Typography variant="subtitle1">Clothes</Typography></NavLink>
                 </li>
                 <li>
-                  <NavLink to="products/shoes">Shoes</NavLink>
+                  <NavLink to="products/shoes"><Typography variant="subtitle1">Shoes</Typography></NavLink>
                 </li>
                 <li>
-                  <NavLink to="products/furniture">Furniture</NavLink>
+                  <NavLink to="products/furniture"><Typography variant="subtitle1">Furniture</Typography></NavLink>
                 </li>
                 <li>
-                  <NavLink to="products/electronics">Electronics</NavLink>
+                  <NavLink to="products/electronics"><Typography variant="subtitle1">Electronics</Typography></NavLink>
                 </li>
                 <li>
-                  <NavLink to="products/luxury">LuxuryItems</NavLink>
+                  <NavLink to="products/luxury"><Typography variant="subtitle1">Luxury Items</Typography></NavLink>
                 </li>
               </ul>
             </p>
             <p>
-              <NavLink to="/aboutUs">ABOUT US</NavLink>
+              <NavLink to="/aboutUs"><Typography variant="subtitle1">About us</Typography></NavLink>
             </p>
           </div>
-          <div className="logo">
-            <h2 style={{ color: "#415161" }}>Vivid</h2>
-            <h2 style={{ color: "#f2295b" }}>Threads</h2>
+          <div className="flex m-auto items-center justify-evenly ml-[150px]">
+            <h2 className="font-700 text-[2.2rem] font-black" style={{ color: "#415161" }}>Vivid</h2>
+            <h2 className="font-700 text-[2.2rem] font-black" style={{ color: "#f2295b" }}>Threads</h2>
           </div>
-          <div className="navbar-icons">
-            <div className="searchBar">
-              <input type="text" name="navSearch" id="navSearch" placeholder="Search here!" />
-              <FaSearch
-                style={{ color: "grey", fontSize: "1.1em", cursor: "pointer"}}
-              />
-            </div>
-
-            <div className="navbarCredentials">
+          <div className=" w-[40%] ml-30 flex items-center justify-center gap-x-10">
+            <div className="flex gap-x-5 items-center justify-center">
               {
                 !isLoggedIn ? (
                   <>
                     <NavLink to="signup">
-                      <button className="credentialBtn">SIGN UP</button>
+                      <Button variant="contained" sx={{ backgroundColor: "#f2295b", color: "white" }} >
+                        <Typography variant="subtitle1" className="font-bold">SIGN UP</Typography>
+                      </Button>
                     </NavLink>
                     <NavLink to="login">
-                      <button className="credentialBtn">LOG IN</button>
+                       <Button variant="outlined" sx={{ color: "#f2295b", borderColor: "#f2295b" }}>
+                        <Typography variant="subtitle1" className="font-bold">Login</Typography>
+                      </Button>
                     </NavLink>
                   </>
                 ) : (
-                  // <NavLink to="logout">
                   <>
                     <button className="credentialBtn" onClick={handleLogout}>LOG OUT</button>
                   </>
-                  // </NavLink> 
                 )
               }
             </div>

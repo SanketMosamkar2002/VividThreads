@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:3001", credentials: true }));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 const url =
   "mongodb+srv://sanketmosamkar573:Sanket1234@cluster0.haq8cus.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0";
 dotenv.config();
